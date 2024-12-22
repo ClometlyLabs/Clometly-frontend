@@ -17,13 +17,13 @@ export default function Page() {
                         type="password"
                         name="password"
                         id="password"
-                        placeholder="Password"
+                        placeholder="Contraseña"
                         className="p-2 w-full bg-transparent border-b-2 border-white text-white outline-none focus:outline-none transition-all duration-300"
                     />
 
                     <button
                         type="submit"
-                        className="hover:bg-cloro-400 hover:shadow-md hover:shadow-cloro-300 transition-all duration-300 text-white bg-cloro-300 py-2 px-4 rounded w-full"
+                        className="hover:bg-romet-400 hover:shadow-md hover:shadow-romet-300 transition-all duration-300 text-white bg-romet-300 py-2 px-4 rounded w-full"
                     >
                         Login
                     </button>
@@ -32,13 +32,13 @@ export default function Page() {
                     <div className="w-full flex items-center justify-between space-x-3">
                         <input type="checkbox" name="Remember me" id="rememberme" />
                         <label htmlFor="rememberme" className="text-gray-400 text-sm ">
-                            Remember me
+                            Recordarme
                         </label>
 
                         <a
                             href="#"
-                            className="text-gray-400 hover:text-cloro-400 text-sm">
-                            Forgot Password?
+                            className="text-gray-400 hover:text-romet-400 text-sm">
+                            Olvidé mi contraseña
                         </a>
                     </div>
                     
