@@ -61,7 +61,7 @@ export default function Page() {
           </div>
           <div className="space-y-6">
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-              Crea conenido y haz que <span className="text-purple-500">todos</span> se fijen en ti!
+              Crea contenido y haz que <span className="text-purple-500">todos</span> se fijen en ti!
             </h2>
           </div>
         </div>
