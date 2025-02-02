@@ -1,5 +1,5 @@
 "use client";
-
+import axios from "axios";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 interface IRegisterForm {
@@ -20,8 +20,14 @@ export default function Page() {
         formState: { errors },
     } = useForm<IRegisterForm>();
 
-    const onSubmit: SubmitHandler<IRegisterForm> = (data) => {
+    const onSubmit: SubmitHandler<IRegisterForm> = async(data) => {
         console.log(data);
+        axios
+            .post("http://localhost:4000/auth/signup", data)
+            .then((response) => {
+                console.log(response);
+                
+            })
     };
 
     return (
@@ -90,9 +96,9 @@ export default function Page() {
                             {...register("email", {
                                 required: "Este campo es obligatorio",
                                 pattern: {
-                                    value: /^[a-zA-Z0]+@[a-zA-Z0]+\.[a-zA-Z]{2,4}$/,
+                                    value: /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$/,
                                     message: "Introduce un email válido",
-                                },
+                                  },
                             })}
                         />
                         {errors.email && (
