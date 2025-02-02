@@ -182,7 +182,7 @@ export default function Page() {
 
                         <div className="w-full flex items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 text-center sm:text-left">
                             <a
-                                href="#"
+                                href="/login"
                                 className="text-gray-400 hover:text-romet-400 text-sm"
                             >
                                 ¿Ya tienes una cuenta? Iniciar sesión

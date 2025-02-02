@@ -40,8 +40,16 @@ export default function Page() {
                             className="text-gray-400 hover:text-romet-400 text-sm">
                             Olvidé mi contraseña
                         </a>
+
                     </div>
-                    
+                    <div className="w-full flex items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 text-center sm:text-left">
+                            <a
+                                href="/register"
+                                className="text-gray-400 hover:text-romet-400 text-sm"
+                            >
+                                ¿No tienes una cuenta? Registrate ahora!
+                            </a>
+                        </div>                    
 
                 </main>
             </div>
