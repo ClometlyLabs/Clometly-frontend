@@ -1,6 +1,7 @@
 "use client";
 import axios from "axios";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 
 interface IRegisterForm {
     first_names: string;
@@ -10,10 +11,11 @@ interface IRegisterForm {
     phone: string;
     birthdate: string;
     password: string;
-    terms: boolean; // Validación para los términos y condiciones
+    terms: boolean;
 }
 
 export default function Page() {
+    const { push } = useRouter();
     const {
         register,
         handleSubmit,
@@ -25,8 +27,9 @@ export default function Page() {
         axios
             .post("http://localhost:4000/auth/signup", data)
             .then((response) => {
-                console.log(response);
-                
+                localStorage.setItem("acces_token", response.data.acces_token);
+                alert("Registro exitoso");
+                push("/lobby");
             })
     };
 
