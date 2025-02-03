@@ -8,7 +8,7 @@ interface IRegisterForm {
     username: string;
     email: string;
     phone: string;
-    birthday: string;
+    birthdate: string;
     password: string;
     terms: boolean; // Validación para los términos y condiciones
 }
@@ -126,16 +126,16 @@ export default function Page() {
 
                         <input
                             type="date"
-                            id="birthday"
+                            id="birthdate"
                             placeholder="Fecha de nacimiento"
                             className={`p-2 w-full bg-transparent border-b-2 ${
-                                errors.birthday ? "border-red-500" : "border-white"
+                                errors.birthdate ? "border-red-500" : "border-white"
                             } text-white outline-none focus:outline-none transition-all duration-300`}
-                            {...register("birthday", { required: "Este campo es obligatorio" })}
+                            {...register("birthdate", { required: "Este campo es obligatorio" })}
                         />
-                        {errors.birthday && (
+                        {errors.birthdate && (
                             <span className="text-red-500 text-sm">
-                                {errors.birthday.message}
+                                {errors.birthdate.message}
                             </span>
                         )}
 
